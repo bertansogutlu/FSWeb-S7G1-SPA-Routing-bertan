@@ -40,19 +40,23 @@ export default function App() {
   return (
     <Router className="App">
       <div>
+
         <KaydedilenlerListesi list={saved} />
+
         <div>
           <Link to="/">FilmListesi</Link>
           <Link to="/filmler/:id">Film</Link>
         </div>
+
         <Switch>
-        <Route path="/filmler/:id">
-            <Film />
-          </Route>
-          <Route path="/">
+          <Route exact path="/">
             <FilmListesi movies={movieList} />
           </Route>
+          <Route exact path="/filmler/:id">
+            <Film />
+          </Route>
         </Switch>
+
       </div>
     </Router>
   );
