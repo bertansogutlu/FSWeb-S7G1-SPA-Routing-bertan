@@ -34,7 +34,7 @@ export default function App() {
 
   const KaydedilenlerListesineEkle = movie => {
     // Burası esnek. Aynı filmin birden fazla kez "saved" e eklenmesini engelleyin
-    
+    console.log("calisiyor")
   };
  
   return (

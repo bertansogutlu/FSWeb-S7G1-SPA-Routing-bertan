@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 export default function Film(props) {
   const [movie, setMovie] = useState();
-
+  const {KaydedilenlerListesineEkle} = props
   let {id} = useParams()
   // URL'den alınan :id parametresini bu değişkene aktarın
 
@@ -30,7 +30,7 @@ export default function Film(props) {
     return <div>Film bilgisi yükleniyor...</div>;
   }
 
-  const { title, director, metascore, stars, KaydedilenlerListesineEkle } = movie;
+  const { title, director, metascore, stars } = movie;
 
   return (
     <div className="save-wrapper">
